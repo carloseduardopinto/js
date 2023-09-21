@@ -1,0 +1,39 @@
+const prompt = require("prompt-sync")()
+
+function iniciar () {
+
+   let peso    
+   let altura
+   let result
+
+   console.log("Calculadora de IMC\n")
+   console.log("Qual o seu peso?")
+   console.log("\nResposta:")
+   peso = prompt ()
+   console.clear()
+   console.log("Qual a sua altura?")
+   console.log("\nResposta:")
+   altura = prompt ()
+   console.clear()
+
+   result = peso/(altura*altura) 
+   console.log("Resultado:\t",result, "\n")
+  
+   if(result > 18.5 && result < 24.9){
+    console.log("Está Normal")
+
+   }
+   
+   if(result < 18.5){
+    console.log("Está abaixo do Peso")
+
+   }
+  
+   if(result > 24.9){
+    console.log("Está acima do Peso")
+
+   }
+
+ }
+
+iniciar()
