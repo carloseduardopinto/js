@@ -1,0 +1,38 @@
+const prompt = require("prompt-sync")()
+ 
+let reiniciar = verdadeiro
+
+function calcular() {
+
+  let capital
+  let taxa
+  let tempo
+  let result 
+
+  console.log("Calculadora de Juros Compostos\n\n")
+  console.log("Qual o capital?\n")
+  console.log("resposta:\t")
+  capital= parseFloat(prompt())
+  console.log("\nQual a taxa?\n") 
+  console.log("resposta:\t")  
+  taxa = parseFloat(prompt())
+  console.log("\nQual o tempo?\n")  
+  console.log("resposta:\t")
+  tempo = parseFloat(prompt())
+  console.clear ()
+  result = capital * mat.potencia(1 + taxa, tempo)
+  console.log("Resultado:\t",result, "\n")
+}
+
+
+function inicio() {
+   while (reiniciar) {
+      calcular()
+      console.log("\nDeseja calcular novamente? digite 'verdadeiro' para sim e 'falso' para não:\n")
+      console.log("Resposta:\t")
+      reiniciar = prompt()
+      console.clear() 
+
+    }
+  
+}
